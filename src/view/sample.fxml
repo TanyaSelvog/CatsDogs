@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.net.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 <GridPane alignment="center" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
    <columnConstraints>
@@ -23,14 +24,18 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
+
+            <Button fx:id="otherBtn" mnemonicParsing="false" onAction="#toOtherScreen" text="Submit" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
             <RadioButton fx:id="dogRadioBtn" mnemonicParsing="false" onAction="#onDogs" text="Dogs" GridPane.halignment="CENTER">
                <toggleGroup>
                   <ToggleGroup fx:id="tgroup" />
                </toggleGroup></RadioButton>
             <RadioButton fx:id="catRadioBtn" mnemonicParsing="false" onAction="#onCats" text="Cats" toggleGroup="$tgroup" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
             <RadioButton fx:id="fishRadioBtn" mnemonicParsing="false" onAction="#onFish" text="Fish" toggleGroup="$tgroup" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-             <Label fx:id="changeMe" prefHeight="19.0" prefWidth="115.0" text="Pick your favorite."
-                    GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1"/>
+             <Label fx:id="changeMe" alignment="CENTER" prefHeight="20.0" prefWidth="179.0" text="Pick your favorite animal." GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
          </children>
       </GridPane>
    </children>
